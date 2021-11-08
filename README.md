@@ -5,10 +5,10 @@ Structure to connect classes with the data stored in the database
 
 **Manual**
 
-Just download php/SqlConnector file, and include or require php/SqlConnector on your PHP file:
+Just download conf/SqlConnector file, and include or require conf/SqlConnector on your PHP file:
 
 ```php
-require_once 'SqlConnector.php';
+require_once 'conf/SqlConnector.php';
 ```
 
 ## Requirements
