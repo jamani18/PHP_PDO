@@ -81,11 +81,11 @@ function convertRowToVehicleClass($r){
 
 ````
 
-**4. Establecer comunicaciones con la base de datos**
+**4. Establish communications with the database**
 
-Apoyandonos en el fichero SqlConnector.php, realizamos el CRUD con la base de datos. 
+Using the SqlConnector.php file, we perform the CRUD with the database.
 
-A continuación se deja algunos ejemplos del código.
+Here are some examples of the code.
 
 ```php
 
@@ -122,11 +122,11 @@ function removeVehicle($idVehicle){
 
 ````
 
-### Estructura de la clase.
+### Class structure
 
-A continuación se establece los pasos para formar la clase con los atributos. Atendiendo el caso peculiar de que la clase alberga otras instancias de clases como atributos.
+Next, the steps to form the class with the attributes are established. Taking care of the peculiar case that the class houses other instances of classes as attributes.
 
-Para empezar crear los atributos de tipo primitivo como se realizan normalmente y creamos el constructor.
+To start, we create the primitive type attributes as they are normally done and then we create the constructor.
 
 ```php
 
@@ -155,11 +155,11 @@ class Vehicle {
 
 ````
 
-Prestamos atención a la estructura para establecer atributos de instancias de clase. En este caso lo realizamos con $type.
+We pay attention to the structure to set attributes of class instances. In this case we do it with $ type.
 
-Para ello, comenzamos declarando el atributo que almacena la ID de la clave foranea ($idType) y un atributo donde se almacenará la instancia con un valor NULL por defecto ($type).
+To do this, we start by declaring the attribute that stores the ID of the foreign key ($ idType) and an attribute where the instance will be stored with a default NULL value ($ type).
 
-En este ejemplo usamos el fichero Vehicle.php que tendrá en el interior un VehicleType.
+In this example we use the Vehicle.php file that will have a VehicleType inside.
 
 ```php
 
@@ -171,7 +171,7 @@ function __construct($id, $name,$idType) {} //just pass foraign key on construct
 
 ````
 
-Los getter y setter tanto para $idType como $type tendrán la siguiente estructura:
+The getters and setters for both $idType and $type will have the following structure:
 
 ```php
 
@@ -202,5 +202,5 @@ function setType($type) {
 
 ````
 
-Con esta estructura conseguimos obtener el objeto desde la base de datos la primera vez, y una vez obtenido, solo lo consultará en la misma clase.
+With this structure we manage to obtain the object from the database the first time, and once obtained, it will only query it in the same class.
 
